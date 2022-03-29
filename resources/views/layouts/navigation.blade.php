@@ -19,10 +19,10 @@
                     <x-nav-link :href="route('index-rekam-medis')" :active="request()->routeIs('rekam-medis/all')">
                         Rekam Medis 
                     </x-nav-link>
-                    @endif
                     <x-nav-link :href="route('form-rekam-medis')" :active="request()->routeIs('rekam-medis/form')">
                         Form Rekam Medis 
                     </x-nav-link>
+                    @endif
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         About
                     </x-nav-link>

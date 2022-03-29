@@ -10,11 +10,17 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 @if (Auth::check())
                     <div class="p-6 bg-white border-b border-gray-200">
-                        You're logged in!
+                        <div>
+                            You're logged in!
+                        </div>
+                        <div>Now you can access Rekam Medis!</div>
                     </div>
-                @else    
+                    @else    
                     <div class="p-6 bg-white border-b border-gray-200">
-                        You're not logged in!
+                        <div>
+                            You're not logged in!
+                        </div>
+                        <div>You cannot access Rekam Medis!</div>
                     </div>
                 @endif
             </div>

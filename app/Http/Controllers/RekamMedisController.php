@@ -44,10 +44,10 @@ class RekamMedisController extends Controller
         $rekam_medis->kondisi = $request->kondisi;
         $rekam_medis->suhu = $request->suhu;
         
-        $imageName = $request->image->getClientOriginalName();
-        $uploadedImage = $request->file("image");
-        $uploadedImage->move(public_path().'/images/', $imageName);
-        $rekam_medis->image = $imageName;
+        // $imageName = $request->image->getClientOriginalName();
+        // $uploadedImage = $request->file("image");
+        // $uploadedImage->move(public_path().'/images/', $imageName);
+        $rekam_medis->image = $request->image;
 
         $rekam_medis->save();
         return redirect('/dashboard');
