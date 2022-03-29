@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-8">
-                <form action="{{ route('rekam-medis-post') }}" method="POST">
+                <form action="{{ route('rekam-medis-post') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!-- Nama Pasien -->
                     <div class="w-full md:w-1/3 my-4 md:mb-0">
@@ -54,11 +54,12 @@
                         <x-input id="suhu" class="block mt-1 w-full" type="number" name="suhu" :value="old('suhu')" step="0.1" min="35" max="45.5" required />
                     </div>
                     <!-- Image -->
+                    <p>NOTE: Image Upload masih belum berjalan, kosongkan untuk testing aplikasi</p>
                     <div class="my-4">
                         <label class="font-weight-bold" for="image">Resep</label>
                         <input type="file" id="image" name="image">
                     </div>
-                    <button type="submit">
+                    <button class="bg-blue-600 text-white px-3 py-1 rounded-md" type="submit">
                         Submit
                     </button>
                 </form>
